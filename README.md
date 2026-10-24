@@ -6,6 +6,7 @@ Estudiante de Diseno y Desarrollo de Software en Tecsup.
 ## Contenido
 
 ### Trabajos del modulo 1
+* [Ver Guía del Laboratorio 03](docs/GUIA.md)
 
 ## Herramientas que uso
 
