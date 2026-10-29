@@ -69,4 +69,4 @@ Estado de las entregas y metas alcanzadas durante la realización del laboratori
 
 ## Evidencia del Proyecto
 
-![Captura del proyecto](../mi-portafolio/img/captura.png)
+![Captura del proyecto](../img/captura.png)
