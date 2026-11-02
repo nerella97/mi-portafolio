@@ -3,7 +3,6 @@
 ![Licencia](https://img.shields.io/badge/licencia-MIT-green)
 ![Versión](https://img.shields.io/badge/versión-1.0.0-blue)
 ![Estado](https://img.shields.io/badge/estado-en%20desarrollo-orange)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?logo=javascript&logoColor=black)
 ![Git](https://img.shields.io/badge/Git-GitHub-181717?logo=github)
 
 Proyecto del curso **Diseño de Interfaces de Programación Avanzado** que documenta cómo contribuir a un repositorio ajeno (tienda-tecsup) mediante Fork, ramas, Issues y Pull Requests, sin alterar el código base original. Está dirigido a estudiantes y desarrolladores que se inician en el trabajo colaborativo con Git.
