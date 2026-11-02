@@ -103,4 +103,4 @@ flowchart TD
 
 ## Contribución
 
-Las contribuciones son bienvenidas. Antes de enviar un Pull Request, revisa la [guía de contribución](CONTRIBUTING.md).
+Las contribuciones son bienvenidas. Lee la [guia de contribucion](CONTRIBUTING.md) antes de enviar cambios.
