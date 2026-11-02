@@ -2,16 +2,27 @@
 
 Para preparar tu copia local del proyecto, sigue primero la sección [Instalación](README.md#instalación) del README.
 
+## Flujo de contribución
+
+```mermaid
+flowchart LR
+    A[Abrir Issue] --> B[Crear rama]
+    B --> C[Commit y push]
+    C --> D[Pull Request]
+    D --> E[Revisión y merge]
+```
+
 ## Cómo reportar un error
 
 1. Revisa en la pestaña **Issues** que el error no haya sido reportado antes.
 2. Abre un nuevo **Issue** con un título corto y claro, por ejemplo: `El total del carrito no considera la cantidad`.
 3. En la descripción incluye:
-   - **Qué esperabas** que ocurriera.
-   - **Qué ocurrió** realmente.
-   - **Donde** ocurrió.
-   - **Pasos para reproducir** el error.
-   - Una **captura de pantalla**, si ayuda a entenderlo.
+   | Campo | Qué escribir |
+   | :--- | :--- |
+   | **Qué esperaba** | El resultado correcto. |
+   | **Qué ocurre** | El resultado incorrecto. |
+   | **Dónde** | Archivo, función y línea. |
+   | **Cómo reproducirlo** | Pasos para ver el error. |
 4. Agrega la etiqueta `bug`.
 
 ## Cómo proponer una mejora
