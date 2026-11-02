@@ -80,14 +80,15 @@ Finalmente, abre un **Pull Request** desde tu rama hacia el repositorio original
 ## Flujo de trabajo
 
 ```mermaid
-flowchart LR
-    A[Repositorio del docente] -->|Fork| B[Fork personal]
-    B -->|git clone| C[Copia local]
-    C -->|git checkout -b| D[Rama de corrección]
-    D -->|git commit| E[Cambios guardados]
-    E -->|git push| B
-    B -->|Pull Request| A
-    A -.->|Issue| D
+flowchart TD
+    A[Fork del repositorio] --> B[Clonar el fork]
+    B --> C[Crear rama de corrección]
+    C --> D[Hacer commit y push]
+    D --> E[Abrir Pull Request]
+    E --> F{"¿PR aprobado?"}
+    F -->|Sí| G[Cambios integrados]
+    F -->|No| H[Corregir observaciones]
+    H --> D
 ```
 
 ## Hoja de ruta
