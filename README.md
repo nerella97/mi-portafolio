@@ -1,49 +1,106 @@
-# Mi portafolio
+# Laboratorio 03: Trabajo Colaborativo con Git y GitHub
 
-Trabajos del curso Diseno de Interfaces de Programacion Avanzado. 
-## Sobre mi
-Estudiante de Diseno y Desarrollo de Software en Tecsup. 
-## Contenido
+![Licencia](https://img.shields.io/badge/licencia-MIT-green)
+![Versión](https://img.shields.io/badge/versión-1.0.0-blue)
+![Estado](https://img.shields.io/badge/estado-en%20desarrollo-orange)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?logo=javascript&logoColor=black)
+![Git](https://img.shields.io/badge/Git-GitHub-181717?logo=github)
 
-### Trabajos del modulo 1
-* [Ver Guía del Laboratorio 03](docs/GUIA.md)
+Proyecto del curso **Diseño de Interfaces de Programación Avanzado** que documenta cómo contribuir a un repositorio ajeno (tienda-tecsup) mediante Fork, ramas, Issues y Pull Requests, sin alterar el código base original. Está dirigido a estudiantes y desarrolladores que se inician en el trabajo colaborativo con Git.
 
-## Herramientas que uso
+> Documentar el proceso de trabajo colaborativo es fundamental para asegurar la calidad y la trazabilidad del código en un equipo de desarrollo.
 
--	**Git** para el control de versiones
--	**GitHub** para el repositorio remoto
--	*Visual Studio Code* como editor 
+## Tabla de contenidos
 
-## Pasos para clonar este proyecto
-1.	Copiar la direccion desde el boton Code
-2.	Ejecutar git clone con esa direccion
-3.	Entrar a la carpeta con cd 
+- [Requisitos](#requisitos)
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Archivos y comandos principales](#archivos-y-comandos-principales)
+- [Flujo de trabajo](#flujo-de-trabajo)
+- [Hoja de ruta](#hoja-de-ruta)
+- [Evidencia del proyecto](#evidencia-del-proyecto)
+- [Contribución](#contribución)
 
-## Mi avance del modulo
--	[x] Laboratorio 01: Git basico
--	[x] Laboratorio 03: Trabajo colaborativo
--	[ ] Laboratorio 04: Markdown
+## Requisitos
 
-## Enlaces utiles
+- **Git** instalado y configurado en el equipo local.
+- Editor de código **Visual Studio Code**.
+- Cuenta activa en [GitHub](https://github.com).
+- Acceso al repositorio base del docente: [tienda-tecsup](https://github.com/jeisson-tecsup/tienda-tecsup).
 
--	[Guia oficial de Markdown](https://www.markdownguide.org/)
--	[Mi perfil de GitHub](https://github.com/nerella97/mi-portafolio) 
+## Instalación
 
-## Captura de mi trabajo
-![Pantalla principal del proyecto](img/captura.png)
+1. Realiza un **Fork** del repositorio original desde la web de GitHub hacia tu cuenta.
+2. Clona tu fork y entra a la carpeta del proyecto:
 
-## Comandos que mas uso
-
-Para ver el estado del proyecto uso `git status`.
-
-```bash git add .
-git commit -m "Actualiza el README" git push origin main
+```bash
+git clone https://github.com/jeisson-tecsup/tienda-tecsup
+cd tienda-tecsup
 ```
 
-| Comando | Que hace |
-|---------|----------|
-| git add | Prepara los cambios |
-| git commit | Guarda la version |
-| git push | Sube los cambios al remoto |
+3. Verifica que el remoto apunte a tu propio fork:
 
-> Documentar es parte del trabajo, no un extra al final.
+```bash
+git remote -v
+```
+
+## Uso
+
+Crea una rama dedicada para tu corrección, haz tus cambios y publícalos:
+
+```bash
+git checkout -b fix/calcular-total
+git add script.js
+git commit -m "fix: considerar la cantidad de cada producto en calcularTotal"
+git push origin fix/calcular-total
+```
+
+Corrección implementada en la función `calcularTotal` de `script.js`:
+
+```javascript
+function calcularTotal(lista) {
+  let total = 0;
+  for (const producto of lista) {
+    total = total + producto.precio * producto.cantidad;
+  }
+  return total;
+}
+```
+
+Finalmente, abre un **Pull Request** desde tu rama hacia el repositorio original.
+
+## Archivos y comandos principales
+
+| Elemento / Comando | Tipo | Descripción |
+| :--- | :---: | :--- |
+| `script.js` | Archivo | Lógica del carrito de compras y cálculo del total. |
+| `index.html` | Archivo | Estructura web principal que vincula el CSS y el JS. |
+| `git checkout -b <rama>` | Comando | Crea una rama nueva e ingresa a ella para aislar los cambios. |
+| `git push origin <rama>` | Comando | Publica la rama en tu fork de GitHub. |
+
+## Flujo de trabajo
+
+```mermaid
+flowchart LR
+    A[Repositorio del docente] -->|Fork| B[Fork personal]
+    B -->|git clone| C[Copia local]
+    C -->|git checkout -b| D[Rama de corrección]
+    D -->|git commit| E[Cambios guardados]
+    E -->|git push| B
+    B -->|Pull Request| A
+    A -.->|Issue| D
+```
+
+## Hoja de ruta
+
+- [x] Identificación y reporte del fallo mediante un *Issue* en el repositorio base.
+- [x] Corrección del error en una rama dedicada y envío del *Pull Request*.
+- [ ] Implementación de integración continua (CI/CD) para pruebas automáticas.
+
+## Evidencia del proyecto
+
+![Captura del proyecto](img/captura.png)
+
+## Contribución
+
+Las contribuciones son bienvenidas. Antes de enviar un Pull Request, revisa la [guía de contribución](CONTRIBUTING.md).
